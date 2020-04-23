@@ -95,8 +95,8 @@ dependencies {
 	implementation group: 'commons-io', name: 'commons-io', version: '2.4'
     // Only needed if FEATURE_POLAR_FILE_TRANSFER used
 	implementation 'com.google.protobuf:protobuf-java:3.1.0'
-	implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
-	implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+	implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 }
 ```
 4. Finally, add the following permissions to  `AndroidManifest.xml`:
