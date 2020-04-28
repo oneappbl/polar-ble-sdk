@@ -12,6 +12,8 @@
 		6C2409052212EB69001C1A84 /* PolarBleSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2409012212EB63001C1A84 /* PolarBleSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C2409072212EB69001C1A84 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2409002212EB63001C1A84 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C56423C2203199400F9BDA9 /* ApiWrapperSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C56423B2203199400F9BDA9 /* ApiWrapperSwift.swift */; };
+		6C582E15245812F100653822 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C582E14245812F000653822 /* SwiftProtobuf.framework */; };
+		6C582E16245812F100653822 /* SwiftProtobuf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C582E14245812F000653822 /* SwiftProtobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C770A59205269C800F3D51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C770A58205269C800F3D51D /* AppDelegate.swift */; };
 		6C770A5B205269C800F3D51D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C770A5A205269C800F3D51D /* ViewController.swift */; };
 		6C770A5E205269C800F3D51D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C770A5C205269C800F3D51D /* Main.storyboard */; };
@@ -27,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6C2409052212EB69001C1A84 /* PolarBleSdk.framework in Embed Frameworks */,
+				6C582E16245812F100653822 /* SwiftProtobuf.framework in Embed Frameworks */,
 				6C2409072212EB69001C1A84 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -47,6 +50,7 @@
 		6C2409002212EB63001C1A84 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../polar-sdk-ios/RxSwift.framework"; sourceTree = "<group>"; };
 		6C2409012212EB63001C1A84 /* PolarBleSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PolarBleSdk.framework; path = "../../polar-sdk-ios/PolarBleSdk.framework"; sourceTree = "<group>"; };
 		6C56423B2203199400F9BDA9 /* ApiWrapperSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiWrapperSwift.swift; sourceTree = "<group>"; };
+		6C582E14245812F000653822 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = "../../polar-sdk-ios/SwiftProtobuf.framework"; sourceTree = "<group>"; };
 		6C770A55205269C800F3D51D /* polarBleSdkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = polarBleSdkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C770A58205269C800F3D51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C770A5A205269C800F3D51D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C2409032212EB63001C1A84 /* RxSwift.framework in Frameworks */,
+				6C582E15245812F100653822 /* SwiftProtobuf.framework in Frameworks */,
 				6C2409042212EB63001C1A84 /* PolarBleSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +110,7 @@
 		6C770A6A20526A9500F3D51D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C582E14245812F000653822 /* SwiftProtobuf.framework */,
 				6C2409012212EB63001C1A84 /* PolarBleSdk.framework */,
 				6C2409002212EB63001C1A84 /* RxSwift.framework */,
 			);
@@ -337,7 +343,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 48T8QNDCP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../",
@@ -365,7 +371,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 48T8QNDCP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../",
