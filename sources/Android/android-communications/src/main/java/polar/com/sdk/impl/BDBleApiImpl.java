@@ -956,14 +956,27 @@ public class BDBleApiImpl extends PolarBleApi implements
                         );
                     } else if (uuid.equals(BleBattClient.BATTERY_SERVICE)) {
                         BleBattClient client = (BleBattClient) session.fetchClient(BleBattClient.BATTERY_SERVICE);
-                        return client.waitBatteryLevelUpdate(true).observeOn(scheduler).doOnSuccess(new Consumer<Integer>() {
-                            @Override
-                            public void accept(Integer integer) throws Exception {
-                                if (callback != null) {
-                                    callback.batteryLevelReceived(deviceId, integer);
+                        client.monitorBatteryLevelUpdate(true).observeOn(scheduler).subscribe(
+                            new Consumer<Integer>() {
+                                @Override
+                                public void accept(Integer integer) throws Exception {
+                                    if (callback != null) {
+                                        callback.batteryLevelReceived(deviceId, integer);
+                                    }
+                                }
+                            },
+                            new Consumer<Throwable>() {
+                                @Override
+                                public void accept(Throwable throwable) throws Exception {
+                                    logError(throwable.getMessage());
+                                }
+                            },
+                            new Action() {
+                                @Override
+                                public void run() throws Exception {
                                 }
                             }
-                        }).toFlowable();
+                        );
                     } else if (uuid.equals(BlePMDClient.PMD_SERVICE)) {
                         final BlePMDClient client = (BlePMDClient) session.fetchClient(BlePMDClient.PMD_SERVICE);
                         return client.waitNotificationEnabled(BlePMDClient.PMD_CP, true).
