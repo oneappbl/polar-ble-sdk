@@ -3,6 +3,8 @@ package polar.com.sdk.api;
 
 import android.content.Context;
 
+import com.androidcommunications.polar.api.ble.BleRefApiVersion;
+
 import polar.com.sdk.impl.BDBleApiImpl;
 
 /**
@@ -23,6 +25,6 @@ public class PolarBleApiDefaultImpl {
      * @return  SDK version number in format major.minor.patch
      */
     public static String versionInfo(){
-        return "2.2.2";
+        return BleRefApiVersion.VERSION_STRING;
     }
 }
